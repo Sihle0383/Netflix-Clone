@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.inter-general {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: black;
+}
+
+
+/* ------header-------- */
+#logo {
+    width: 200px;
+    margin-top: 1rem;
+    margin-left: -12rem;
+    cursor:pointer;
+}
+
+.sign {
+    margin-right: -10rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1px solid #e50914;
+}
+
+.sign:hover {
+    background-color: #f40612;
+}
+
+button {
+    background: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 3px;
+}
+
+header > * {
+    color: white;
+    
+}
+
+header {
+     background: linear-gradient(rgb(0, 0, 1), rgba(0,0,0,.5), rgb(0, 0, 1)), 
+                 url(./resources/background.jpg) center no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 90vh;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     overflow: visible;
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw; 
+}
+
+h1 {
+    margin-top: 20vh;
+    font-family: unset;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+h5 {
+    font-family: unset;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+  
+
+header {
+  position: relative; /* needed for absolute positioning */
+  padding-bottom: 8px; /* make space for the line */
+  overflow: visible;
+}
+
+header::after {
+  content: ""; /* required for pseudo-elements to show */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  
+  background: linear-gradient(
+    to right,
+    #210D16 0%,
+    #B82869 25%,
+    #E50914 50%,
+    #B82869 75%,
+    #210D16 100%
+  );
+  background-size: 200% 100%;
+  background-position: 50% 0%;
+  border-radius: 50% / 100% 100% 0 0;
+
+  transition: 0.6s ease;
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4), 0 2px 10px rgba(229, 9, 20, 0.3);;
+}
+
+header:hover::after {
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.7);
+}
+
+.CTA {
+    width: unset;
+    display: flex;
+    align-items: stretch;
+    max-width: 500px;
+}
+
+.CTA input {
+    background-color: transparent;
+    padding: 16px 58px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 4px 4px;
+    outline: none;
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font: bold;
+}
+
+input::placeholder {
+    color: lightgray;
+    text-align:left;
+}
+
+.CTA button {
+    padding: 14px 32px;
+    font-size: 22px;
+    font-weight: 500;
+    border: 1px solid #e50914;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.CTA button:hover {
+    background-color: #f40612;
+}
+
+h3 {
+    color: white;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* ---------main--------- */
+#trending-now {
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+div span {
+    -webkit-text-stroke: 2px white;
+    font-weight: 900;
+    display: flex;
+    font-size: 100px;
+    position: relative;
+    left: -25px;
+    z-index: 3;
+    color: black;
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.8);
+
+    right: 25px;
+
+}
+
+
+
+div.card {
+    width: 180px;
+    height: 270px; 
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    position: relative;
+    border-radius: 8px;
+    overflow:visible;
+
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+#show1 {
+    background: url("resources/show1.png") center no-repeat;
+    background-size: cover;
+}
+
+#show2 {
+    background: url("resources/show2.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show3 {
+    background: url("resources/show3.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show4 {
+    background: url("resources/show4.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show5 {
+    background: url("resources/show5.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show6 {
+    background: url("resources/show6.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show7 {
+    background: url("resources/show7.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show8 {
+    background: url("resources/show8.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show9 {
+    background: url("resources/show9.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show10 {
+    background: url("resources/show10.webp") center no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding: 0 10vw;
+}
+
+
+/* --------Trailer-Section---------- */
+.trailer-section {
+    position: relative;
+    width: 100%;
+    height: 40vw;
+    max-height: 500px;
+    margin: 3vw 0;
+    overflow: hidden;
+}
+
+.trailer-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trailer-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+}
+
+.trailer-overlay h2 {
+    font-size: clamp(24px, 3vw, 48px);
+    margin-bottom: center;
+}
+
+#more-reasons {
+    margin-bottom: 100px;
+    display: flex;
+
+    gap: 25px;
+
+}
+
+.reason-card {
+    color: lightgrey;
+    width: 300px;
+    height: 320px;
+    font-weight: 400;
+
+
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+
+    border-radius: 20px;
+    padding: 5px
+}
+
+.reason-card h4 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+#faq {
+    color: white;
+    font-size: 24px;
+    
+}
+
+.frequent {
+    font-family: unset;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+details {
+    background: #2d2d2d;
+    padding: 10px;
+    margin-bottom: 8px;
+
+}
+
+.summary {
+    padding: 24px 26px;
+}
+
+.summary:hover {
+    background-color: #414141;
+    margin-bottom: 1px;
+    transition: background 0.2s ease;
+}
+
+details p {
+    border-top: 1px solid black;
+}
+/* ------------------------------------------------------------------------------------------- */
+
+
+/* --------------footer---------- */
+footer {
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#links {
+    color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
