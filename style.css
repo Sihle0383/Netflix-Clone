@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.inter-general {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: black;
+}
+
+#logo {
+    width: 200px;
+}
+
+button {
+    background: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 3px;
+}
+
+header > * {
+    color: white;
+    
+}
+
+header {
+     background: linear-gradient(rgb(0, 0, 1), rgba(0,0,0,.5), rgb(0, 0, 1)), 
+                 url(./resources/background.jpg) center no-repeat;
+     background-size: cover;
+     width: 100%;
+     height: 90vh;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+header section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw; 
+}
+
+h2 {
+    margin-top: 50vh;
+}
+
+.CTA {
+    width: unset;
+}
+
+h3 {
+    color: white;
+}
+
+div span {
+    -webkit-text-stroke: 1px white;
+    font-weight: 500;
+    font-size: 100px;
+    position: relative;
+    right: 25px;
+
+}
+
+div.card {
+    width: 214px;
+    height: 300px; 
+
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+#show1 {
+    background: url("resources/show1.png") center no-repeat;
+    background-size: cover;
+}
+
+#show2 {
+    background: url("resources/show2.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show3 {
+    background: url("resources/show3.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show4 {
+    background: url("resources/show4.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show5 {
+    background: url("resources/show5.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show6 {
+    background: url("resources/show6.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show7 {
+    background: url("resources/show7.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show8 {
+    background: url("resources/show8.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show9 {
+    background: url("resources/show9.webp") center no-repeat;
+    background-size: cover;
+}
+
+#show10 {
+    background: url("resources/show10.webp") center no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding: 0 10vw;
+}
+
+#trending-now {
+    display: flex;
+    gap: 100px;
+}
+
+#more-reasons {
+    margin-bottom: 100px;
+    display: flex;
+
+    gap: 25px;
+
+}
+
+.reason-card {
+    color: white;
+    width: 300px;
+    height: 240px;
+
+
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+#faq {
+    color: white;
+}
+
+
+details {
+    background: #2d2d2d;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+details p {
+    border-top: 1px solid black;
+}
+
+footer {
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#links {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
