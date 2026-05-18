@@ -12,8 +12,25 @@ body {
     background: black;
 }
 
+
+/* ------header-------- */
 #logo {
     width: 200px;
+    margin-top: 1rem;
+    margin-left: -12rem;
+    cursor:pointer;
+}
+
+.sign {
+    margin-right: -10rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1px solid #e50914;
+}
+
+.sign:hover {
+    background-color: #f40612;
 }
 
 button {
@@ -39,6 +56,7 @@ header {
      display: flex;
      flex-direction: column;
      align-items: center;
+     overflow: visible;
 }
 
 header section {
@@ -48,30 +66,137 @@ header section {
     width: 50vw; 
 }
 
-h2 {
-    margin-top: 50vh;
+h1 {
+    margin-top: 20vh;
+    font-family: unset;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+h5 {
+    font-family: unset;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+  
+
+header {
+  position: relative; /* needed for absolute positioning */
+  padding-bottom: 8px; /* make space for the line */
+  overflow: visible;
+}
+
+header::after {
+  content: ""; /* required for pseudo-elements to show */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  
+  background: linear-gradient(
+    to right,
+    #210D16 0%,
+    #B82869 25%,
+    #E50914 50%,
+    #B82869 75%,
+    #210D16 100%
+  );
+  background-size: 200% 100%;
+  background-position: 50% 0%;
+  border-radius: 50% / 100% 100% 0 0;
+
+  transition: 0.6s ease;
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4), 0 2px 10px rgba(229, 9, 20, 0.3);;
+}
+
+header:hover::after {
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.7);
 }
 
 .CTA {
     width: unset;
+    display: flex;
+    align-items: stretch;
+    max-width: 500px;
+}
+
+.CTA input {
+    background-color: transparent;
+    padding: 16px 58px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 4px 4px 4px;
+    outline: none;
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font: bold;
+}
+
+input::placeholder {
+    color: lightgray;
+    text-align:left;
+}
+
+.CTA button {
+    padding: 14px 32px;
+    font-size: 22px;
+    font-weight: 500;
+    border: 1px solid #e50914;
+    border-radius: 4px 4px 4px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.CTA button:hover {
+    background-color: #f40612;
 }
 
 h3 {
     color: white;
 }
+/* -------------------------------------------------------------------------- */
+
+
+/* ---------main--------- */
+#trending-now {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
 
 div span {
     -webkit-text-stroke: 1px white;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 100px;
     position: relative;
+    left: -15px;
+    z-index: 2;
+    color: black;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+
     right: 25px;
 
 }
 
 div.card {
-    width: 214px;
-    height: 300px; 
+    width: 180px;
+    height: 270px; 
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 
     display: flex;
     align-items: flex-end;
@@ -134,7 +259,41 @@ main {
 
 #trending-now {
     display: flex;
-    gap: 100px;
+    gap: 50px;
+    
+}
+
+/* --------Trailer-Section---------- */
+.trailer-section {
+    position: relative;
+    width: 100%;
+    height: 40vw;
+    max-height: 500px;
+    margin: 3vw 0;
+    overflow: hidden;
+}
+
+.trailer-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trailer-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+}
+
+.trailer-overlay h2 {
+    font-size: clamp(24px, 3vw, 48px);
+    margin-bottom: center;
 }
 
 #more-reasons {
@@ -146,9 +305,10 @@ main {
 }
 
 .reason-card {
-    color: white;
+    color: lightgrey;
     width: 300px;
-    height: 240px;
+    height: 320px;
+    font-weight: 400;
 
 
     background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
@@ -159,8 +319,13 @@ main {
     align-items: flex-end;
 
     border-radius: 20px;
-    padding: 5px;
+    padding: 5px
+}
 
+.reason-card h4 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .icon {
@@ -170,29 +335,50 @@ main {
 
 #faq {
     color: white;
+    font-size: 24px;
+    
 }
 
+.frequent {
+    font-family: unset;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
 
 details {
     background: #2d2d2d;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 
+}
+
+.summary {
+    padding: 24px 26px;
+}
+
+.summary:hover {
+    background-color: #414141;
+    margin-bottom: 1px;
+    transition: background 0.2s ease;
 }
 
 details p {
     border-top: 1px solid black;
 }
+/* ------------------------------------------------------------------------------------------- */
 
+
+/* --------------footer---------- */
 footer {
     padding: 0 10vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }
 
 #links {
-    color: white;
+    color: lightgrey;
     display: flex;
     justify-content: space-between;
     width: 100%;
